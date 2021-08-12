@@ -6,6 +6,19 @@ class Employee extends CI_Model{
       //  $this->load->database();
     }
 
+    public function validate_login($email,$pass){
+      $query = $this->db->where(array("email"=>$email,"password"=>$pass))
+      ->get('customer');
+      //echo "<pre>";
+      if($query->result_id->num_rows>=1)
+      {
+        return true;
+      }
+      else
+      {
+      return false;
+      }
+    }
    public function GetAllCustomer(){
       //  $result=$this->db->query("select* from customer");
        

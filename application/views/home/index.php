@@ -18,6 +18,7 @@
                 <th>Email</th>
                 <th>Password</th>
                 <th>Address</th>
+                <th>Image</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 <td><?php echo $row["email"]; ?></td>
                 <td><?php echo $row["password"]; ?></td>
                 <td><?php echo $row["address"]; ?></td>
+                <td><img src='.<?php echo $row["image"] ?>' alt="" height="70" width="70"></td>
                 <td>
                <a href="#" class="btn btn-info" id='<?php echo $row["id"]; ?>' onclick="editcustomer(this.id)">edit</a>
                 ||

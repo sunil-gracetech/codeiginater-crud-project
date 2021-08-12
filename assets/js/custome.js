@@ -1,4 +1,5 @@
 var url="http://localhost/myciapp/";
+
 function editcustomer(id){
    // console.log(id)
     $.post(url+"home/getcustomerbyid",{id:id},function(result){
@@ -11,6 +12,7 @@ function editcustomer(id){
         $("#myModal").modal("show")
     })
 }
+
 
 $("#frm_edit").submit(function(e){
     e.preventDefault()

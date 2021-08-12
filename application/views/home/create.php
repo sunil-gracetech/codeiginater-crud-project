@@ -15,7 +15,7 @@
                 <div class="card">
                 <?php //echo validation_errors(); ?>
                 </div>
-                <?php echo form_open("Home/Create"); ?>
+                <?php echo form_open_multipart("Home/Create"); ?>
                     <div class="form-group">
                         <label for="">Customer name</label>
                         <!-- <input type="text" class="form-control"> -->
@@ -80,6 +80,11 @@
 
                             ?>
 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Choose Image</label>
+                        <input type="file" name="image" class="form-control">
                     </div>
                     <div class="form-group">
                         <?php
